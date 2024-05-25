@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+
+    "rubrica_telefonica": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+
+          "nome": {"type": "string"},
+          "tipo": {"type": "string",
+               "enum": ["privato", "attività professionale", "attività commerciale", "servizio pubblico"]},
+          "numero": {"type": "string"},
+
+          "indirizzo": {
+            "type": "object",
+            "properties": {
+
+              "via_civico": {"type": "string"},
+              "città": {"type": "string"}
+            }
+          }
+        },
+
+        "required": ["nome", "numero"],
+        "additionalProperties": false
+      }
+    }
+  },
+
+  "required": ["rubrica_telefonica"],
+  "additionalProperties": false
+}

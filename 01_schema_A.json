@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+
+    "banca": {
+      "type": "object",
+      "properties": {
+
+        "conto": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+
+              "num_conto": {"type": "string"},
+              "agenzia": {"type": "string"},
+              "saldo": {"type": "number"},
+  
+              "cliente": {
+                "type": "object",
+                "properties": {
+  
+                  "nome": {"type": "string"},
+                  "cognome": {"type": "string"},
+                  "via": {"type": "string"},
+                  "città": {"type": "string"}
+                },
+  
+                "required": ["nome", "cognome"],
+                "additionalProperties": false
+              }
+            },
+
+            "required": ["num_conto", "cliente"],
+            "additionalProperties": false
+          }
+        }
+      },
+      
+      "required": ["conto"],
+      "additionalProperties": false
+    }
+  },
+
+  "required": ["banca"],
+  "additionalProperties": false
+}

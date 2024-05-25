@@ -1,0 +1,22 @@
+{
+  "conti": [
+    {
+      "num_conto": "102",
+      "agenzia": "Verona",
+      "saldo": 555,
+      "cliente": {
+        "nome": "Mario",
+        "cognome": "Rossi"
+      }
+    },
+    {
+      "num_conto": "104",
+      "cliente": {
+        "nome": "Paolo",
+        "cognome": "Verdi",
+        "via": "Strada Le Grazie",
+        "città": "Verona"
+      }
+    }
+  ]
+}

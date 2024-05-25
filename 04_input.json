@@ -1,0 +1,31 @@
+{
+  "students": [
+    {
+      "name": "John Doe",
+      "age": 25,
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10001"
+      },
+      "hobbies": [
+        "reading"
+      ]
+    },
+    {
+      "name": "Mary Poe",
+      "age": 24,
+      "address": {
+        "street": "134 Sec St",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10001"
+      },
+      "hobbies": [
+        "reading",
+        "running"
+      ]
+    }
+  ]
+}

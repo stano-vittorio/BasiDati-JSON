@@ -1,0 +1,37 @@
+{
+  "banca": {
+    "conto": [
+      {
+        "num_conto": "101",
+        "agenzia": "Verona",
+        "saldo": 555,
+        "cliente": {
+          "nome": "Mario",
+          "cognome": "Rossi",
+          "via": "Garibaldi",
+          "città": "Verona"
+        }
+      },
+      {
+        "num_conto": "1010",
+        "saldo": 555.5,
+        "cliente": {
+          "nome": "Mario",
+          "cognome": "Rossi",
+          "via": "Garibaldi",
+          "città": "Verona"
+        }
+      },
+      {
+        "num_conto": "201",
+        "agenzia": "Negrar",
+        "saldo": 1020,
+        "cliente": {
+          "nome": "Paolo",
+          "cognome": "Verdi",
+          "città": "Verona"
+        }
+      }
+    ]
+  }
+}

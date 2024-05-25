@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+
+    "conti": {
+      "$ref": "#/$defs/contiDef"
+    }
+  },
+
+  "required": ["conti"],
+  "additionalProperties": false,
+
+  "$defs": {
+
+    "contiDef": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+
+          "num_conto": {"type": "string"},
+          "agenzia": {"type": "string"},
+          "saldo": {"type": "number"},
+          "cliente": {"$ref": "#/$defs/clienteDef"}
+        },
+
+        "required": ["num_conto", "cliente"],
+        "additionalProperties": false
+      },
+
+      "minItems": 1,
+          "uniqueItems": true
+    },
+
+    "clienteDef": {
+      "type": "object",
+      "properties": {
+
+        "nome": {"type": "string"},
+        "cognome": {"type": "string"},
+        "via": {"type": "string"},
+        "città": {"type": "string"}
+      },
+
+      "required": ["nome", "cognome"],
+      "additionalProperties": false
+    }
+  }
+}

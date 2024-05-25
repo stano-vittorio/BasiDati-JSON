@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "students": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/student"
+      }
+    }
+  },
+  
+  "additionalProperties": false,
+
+  "$defs": {
+    "student": {
+      "type": "object",
+      "properties": {
+
+        "name": {"type": "string"},
+        "age": {"type": "integer"},
+        "address": {"$ref": "#/$defs/addr"},
+
+        "hobbies": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+
+      "additionalProperties": false
+    },
+    
+    "addr": {
+      "type": "object",
+      "properties": {
+
+        "street": {"type": "string"},
+        "city": {"type": "string"},
+        "state": {"type": "string"},
+        "postalCode": {"type": "string"}
+      },
+
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+
+    "banca": {
+      "$ref": "#/$defs/bancaDef"
+    }
+  },
+
+  "required": ["banca"],
+  "additionalProperties": false,
+
+  "$defs": {
+
+    "bancaDef": {
+      "type": "object",
+      "properties": {
+
+        "conto": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contoDef"
+          }
+        }
+      },
+
+      "required": ["conto"],
+      "additionalProperties": false
+    },
+
+    "contoDef": {
+      "type": "object",
+      "properties": {
+
+        "num_conto": {"type": "string"},
+        "agenzia": {"type": "string"},
+        "saldo": {"type": "number"},
+        "cliente": {"$ref": "#/$defs/clienteDef"}
+      },
+
+      "required": ["num_conto", "cliente"],
+      "additionalProperties": false
+    },
+
+    "clienteDef": {
+      "type": "object",
+      "properties": {
+
+        "nome": {"type": "string"},
+        "cognome": {"type": "string"},
+        "via": {"type": "string"},
+        "città": {"type": "string"}
+      },
+
+      "required": ["nome", "cognome"],
+      "additionalProperties": false
+    }
+  }
+}

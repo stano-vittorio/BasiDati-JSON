@@ -1,0 +1,22 @@
+{
+  "rubrica_telefonica": [
+    {
+      "nome": "Mario Rossi",
+      "tipo": "privato",
+      "numero": "123456789",
+      "indirizzo": {
+        "via_civico": "Via Roma, 10",
+        "città": "Verona"
+      }
+    },
+    {
+      "nome": "Paolo Verdi",
+      "tipo": "attività commerciale",
+      "numero": "987654321",
+      "indirizzo": {
+        "via_civico": "Via Milano, 20",
+        "città": "Milano"
+      }
+    }
+  ]
+}

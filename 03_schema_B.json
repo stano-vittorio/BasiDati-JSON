@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    
+    "rubrica_telefonica": {
+    "type": "array",
+    "items": {
+      "$ref": "#/$defs/utente"
+    },
+    "minItems": 1,
+    "uniqueItems": true
+    }
+  },
+  "required": ["rubrica_telefonica"],
+  "additionalProperties": false,
+    
+  "$defs": {
+    
+    "utente": {
+    "type": "object",
+    "properties": {
+      
+      "nome": {"type": "string"},
+      "tipo": {"enum": ["privato", "attività professionale", "attività commerciale", "servizio pubblico"]},
+      "numero": {"type": "string"},
+      "indirizzo": {"$ref": "#/$defs/indirizzo"}
+    },
+    "required": ["nome", "numero"],
+    "additionalProperties": false
+    },
+    
+    "indirizzo": {
+    "type": "object",
+    "properties": {
+      
+      "via_civico": {"type": "string"},
+      "città": {"type": "string"}
+    }
+    }
+  }
+}
